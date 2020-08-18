@@ -16,8 +16,7 @@ class HomeViewModel {
     var dataSource: UICollectionViewDiffableDataSource<Sections, Results>?
     
     func fetchCharacters() {
-//        let endpoint = "https://rickandmortyapi.com/api/character/"
-          let endpoint = "https://rickandmortyapi.com/api/character/?page=2"
+        let endpoint = "https://rickandmortyapi.com/api/character/"
         
         services.fetch(url: endpoint, type: User.self) { (result) in
             switch result {
