@@ -12,13 +12,13 @@ import UIKit
 class HomeViewModel {
     let services = Services()
     var results = [Results]()
-    var user: User? = nil
+    var user: Characters? = nil
     var dataSource: UICollectionViewDiffableDataSource<Sections, Results>?
     
     func fetchCharacters() {
         let endpoint = "https://rickandmortyapi.com/api/character/"
         
-        services.fetch(url: endpoint, type: User.self) { (result) in
+        services.fetch(url: endpoint, type: Characters.self) { (result) in
             switch result {
 
             case .success(let user):
@@ -34,7 +34,7 @@ class HomeViewModel {
     }
     
     func fetchMore(urlString: String) {
-        services.fetch(url: urlString, type: User.self) { (result) in
+        services.fetch(url: urlString, type: Characters.self) { (result) in
             switch result {
 
             case .success(let user):
@@ -65,7 +65,9 @@ class HomeViewModel {
         dataSource?.apply(snapshot, animatingDifferences: true)
     }
     
-    func didSelectItemAt(_ indexPath: IndexPath, completion: () -> ()) {
-        
+    func didSelectItemAt(_ indexPath: IndexPath, completion: (DetailsViewController) -> ()) {
+        let detailsViewController = DetailsViewController()
+        detailsViewController.results = results[indexPath.item]
+        completion(detailsViewController)
     }
 }

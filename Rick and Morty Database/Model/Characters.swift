@@ -8,8 +8,8 @@
 
 import Foundation
 
-// MARK: - User
-struct User: Codable, Hashable {
+// MARK: - Characters
+struct Characters: Codable, Hashable {
     let info: Info
     let results: [Results]
 }

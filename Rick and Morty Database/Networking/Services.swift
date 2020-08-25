@@ -16,15 +16,6 @@ class Services {
         case badDataTask
     }
     
-    func charactersDataFetcher(completion: @escaping (Any) -> Void) {
-        guard let url = URL(string: "https://rickandmortyapi.com/api/character/") else { return }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let json = try? JSONSerialization.jsonObject(with: data!, options: []) {
-                completion(json)
-            }
-        }.resume()
-    }
-    
     func fetch<T: Decodable>(url: String, type: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void) {
         
         guard let url = URL(string: url) else {
