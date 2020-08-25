@@ -13,7 +13,6 @@ class DetailsViewController: UIViewController {
     // Character Image
     private lazy var characterImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "rick.png")
         imageView.contentMode = .scaleToFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
