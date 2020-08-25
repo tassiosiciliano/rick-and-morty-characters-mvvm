@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B76F460124F00C9100DB1B09 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F460024F00C9100DB1B09 /* DetailsViewController.swift */; };
 		B7AFAF2C24476C0D00F2BB48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AFAF2B24476C0D00F2BB48 /* AppDelegate.swift */; };
 		B7AFAF2E24476C0D00F2BB48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AFAF2D24476C0D00F2BB48 /* SceneDelegate.swift */; };
 		B7AFAF3824476C1000F2BB48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AFAF3624476C1000F2BB48 /* LaunchScreen.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B76F460024F00C9100DB1B09 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		B7AFAF2824476C0D00F2BB48 /* Rick and Morty Database.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick and Morty Database.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7AFAF2B24476C0D00F2BB48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7AFAF2D24476C0D00F2BB48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				B7AFAF3F24476CCD00F2BB48 /* HomeCollectionViewController.swift */,
+				B76F460024F00C9100DB1B09 /* DetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				B7AFAF4E24520EFB00F2BB48 /* HomeCollectionViewCell.swift in Sources */,
 				B7AFAF4A2447727800F2BB48 /* Services.swift in Sources */,
 				B7AFAF4C24520BC800F2BB48 /* HomeViewModel.swift in Sources */,
+				B76F460124F00C9100DB1B09 /* DetailsViewController.swift in Sources */,
 				B7FE97E624929E22009B6148 /* UIImageView+Ext.swift in Sources */,
 				B7AFAF4024476CCD00F2BB48 /* HomeCollectionViewController.swift in Sources */,
 				B7AFAF2C24476C0D00F2BB48 /* AppDelegate.swift in Sources */,

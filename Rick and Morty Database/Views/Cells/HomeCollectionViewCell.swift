@@ -62,7 +62,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
             nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             nameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            nameLabel.heightAnchor.constraint(equalToConstant: 13)
+            nameLabel.heightAnchor.constraint(equalToConstant: 13),
         ])
     }
 }
