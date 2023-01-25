@@ -10,10 +10,17 @@ import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
     
+    //MARK: Constants
+    private enum Constants {
+        static var imageCornerRadius: CGFloat = 12
+        static var fontSize: CGFloat = 12
+        static var numberOfLines: Int = 0
+    }
+    
     // Character Image
     private lazy var characterImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.layer.cornerRadius = 12
+        imageView.layer.cornerRadius = Constants.imageCornerRadius
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -24,8 +31,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .label
-        label.font = .systemFont(ofSize: 13, weight: .bold)
-        label.numberOfLines = 0
+        label.font = .systemFont(ofSize: Constants.fontSize, weight: .bold)
+        label.numberOfLines = Constants.numberOfLines
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -48,7 +55,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     func setupUI() {
         addSubview(characterImageView)
-        addSubview(nameLabel)
         
         NSLayoutConstraint.activate([
             
@@ -56,13 +62,9 @@ class HomeCollectionViewCell: UICollectionViewCell {
             characterImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             characterImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             characterImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-    
-            // Character Name Label
-            nameLabel.topAnchor.constraint(equalTo: characterImageView.bottomAnchor),
-            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            nameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            nameLabel.heightAnchor.constraint(equalToConstant: 13),
+            characterImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            characterImageView.heightAnchor.constraint(equalToConstant: 120),
+            characterImageView.widthAnchor.constraint(equalToConstant: 120),
         ])
     }
 }

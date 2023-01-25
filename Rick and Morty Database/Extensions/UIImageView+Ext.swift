@@ -21,6 +21,7 @@ extension UIImageView {
             image = cachedImage
             return
         }
+        
         Services().fetch(url: urlString) { (result) in
             switch result {
             case .success(let image):

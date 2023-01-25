@@ -73,7 +73,7 @@ class DetailsViewController: UIViewController {
     
     func setupNavigation() {
         self.navigationItem.title = results?.name
-        self.navigationController?.navigationBar.prefersLargeTitles = false
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     func setupComponents() {
@@ -100,16 +100,10 @@ class DetailsViewController: UIViewController {
         NSLayoutConstraint.activate([
             
             // Character Image
-            characterImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 64),
+            characterImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 128),
             characterImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             characterImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             characterImageView.heightAnchor.constraint(equalToConstant: 340),
-            
-//            // Character Name Label
-//            nameLabel.topAnchor.constraint(equalTo: characterImageView.bottomAnchor, constant: 32),
-//            nameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-//            nameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//            nameLabel.heightAnchor.constraint(equalToConstant: 13),
             
             // Character Species Label
             speciesLabel.topAnchor.constraint(equalTo: characterImageView.bottomAnchor, constant: 16),
